@@ -8,7 +8,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/managers/leaderboard');
+        const { data } = await axios.get('http://45.131.96.9:3000/managers/leaderboard');
         setLeaderboard(data);
       } catch (error) {
         console.error('Error fetching leaderboard data', error);
@@ -18,7 +18,7 @@ const Profile = () => {
     fetchLeaderboard();
 
     // Подключение к WebSocket серверу
-    const socket = io('http://localhost:3000');
+    const socket = io('http://45.131.96.9:3000');
 
     // Обновление данных при получении уведомления
     socket.on('updateLeaderboard', fetchLeaderboard);
