@@ -1,9 +1,9 @@
-import UnderConstruction from './pages/UnderConstructions';
+import Leaderboard from './pages/Leaderboard';
 
 function App() {
 
   // return <RouterProvider router={router} />
-  return <UnderConstruction />;
+  return <Leaderboard />;
 }
 
 export default App

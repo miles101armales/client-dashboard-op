@@ -3,45 +3,55 @@
 @tailwind utilities;
 
 @layer base {
-	body {
-		@apply text-sm;
-	}
-	td {
-		@apply capitalize text-white/70;
-	}
-	thead td {
-		@apply text-white;
-	}
+  body {
+    @apply font-roboto;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 @layer components {
-	.btn {
-		@apply flex gap-2 items-center text-white py-2 px-4 rounded-md;
-	}
-	.input {
-		@apply bg-transparent p-2 border bg-slate-700 placeholder:text-white border-slate-800 rounded-md outline-none focus:border-slate-300;
-	}
-	.container {
-		@apply max-w-[1000px];
-	}
+  .profile-container {
+    @apply max-w-4xl mx-auto py-8;
+  }
+
+  .profile-header {
+    @apply text-center mb-8;
+  }
+
+  .profile-header h1 {
+    @apply text-4xl font-black mb-2;
+  }
+
+  .profile-header h2 {
+    @apply text-2xl font-bold text-gray-600;
+  }
+
+  .profile-item {
+    @apply flex items-center justify-between bg-white shadow-md p-4 rounded-lg mb-4;
+  }
+
+  .profile-info {
+    @apply flex flex-col;
+  }
+
+  .profile-info h3 {
+    @apply text-lg font-extrabold text-gray-900;
+  }
+
+  .profile-info span {
+    @apply text-sm font-thin text-gray-500;
+  }
+
+  .profile-sales {
+    @apply text-lg font-bold text-gray-700;
+  }
 }
 
 @layer utilities {
-	.btn-red {
-		@apply bg-rose-900 hover:bg-rose-800;
-	}
-	.btn-green {
-		@apply bg-green-600 hover:bg-green-800
-	}
-	@keyframes spin-triangle {
-		0% {
-		  transform: rotate(0deg);
-		}
-		100% {
-		  transform: rotate(360deg);
-		}
-	}
-  .animate-spin-triangle {
-		animation: spin-triangle 1s linear infinite;
-	}
+  .btn-red {
+    @apply bg-rose-900 hover:bg-rose-800;
+  }
+  .btn-green {
+    @apply bg-green-600 hover:bg-green-800;
+  }
 }
