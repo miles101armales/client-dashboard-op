@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Profile from '../components/Profile';
 import { instance } from '../api/axios.api';
 
