@@ -10,6 +10,48 @@
 }
 
 @layer components {
+	.progress-bar-container {
+		width: 100%;
+		background-color: #f3f3f3;
+		border-radius: 8px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	.progress-bar {
+		width: 100%;
+		background-color: #eee;
+	}
+
+	.progress-bar-fill {
+		height: 20px;
+		background-color: #4caf50;
+		transition: width 0.4s ease;
+		background-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0) 45%,
+			rgba(255, 255, 255, 0.6) 50%,
+			rgba(255, 255, 255, 0) 55%
+		);
+		animation: shimmer 2s infinite linear;
+	}
+
+	.progress-percentage {
+		margin-left: 10px;
+		font-weight: bold;
+		color: #333;
+	}
+
+	@keyframes shimmer {
+		0% {
+			background-position: -20px;
+		}
+		100% {
+			background-position: 500px;
+		}
+	}
 	.profile-container {
 		@apply max-w-4xl mx-auto py-8;
 	}
