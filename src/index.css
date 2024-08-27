@@ -40,6 +40,7 @@
 
 	.progress-percentage {
 		margin-left: 10px;
+		margin-right: 10px;
 		font-weight: bold;
 		color: #333;
 	}
@@ -49,7 +50,7 @@
 			background-position: -20px;
 		}
 		100% {
-			background-position: 500px;
+			background-position: 510px;
 		}
 	}
 	.profile-container {
