@@ -43,7 +43,7 @@ const Leaderboard: FC = () => {
     const socket = io('http://45.131.96.9:3000');
     socket.on('updateLeaderboard', fetchLeaderboard);
 
-    const duration = 5000; // Длительность прокрутки в миллисекундах
+    const duration = 15000; // Длительность прокрутки в миллисекундах
     const scrollStep = 10; // Шаг прокрутки в пикселях
 
     const scrollToElement = (element) => {
@@ -75,7 +75,7 @@ const Leaderboard: FC = () => {
         scrollToElement(firstDivRef.current);
       }
       setScrollToLast(!scrollToLast);
-    }, 10000); // Интервал между прокрутками, 60000 миллисекунд = 1 минута
+    }, 15000); // Интервал между прокрутками, 60000 миллисекунд = 1 минута
 
     // Очистка при размонтировании компонента
     return () => {
